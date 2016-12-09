@@ -1,0 +1,55 @@
+.oneplayer{
+    width:25%;
+    text-align: center;
+    height:150rpx;
+    padding-bottom: 30rpx;
+    display:inline-block;
+    position: relative;
+   
+    overflow: hidden;
+    clear: both;
+
+}
+
+.oneplayer .cardid{
+    font-size: 30rpx;
+    position: absolute;
+    left:50%;
+    margin-left: -50rpx;
+    top:0;
+    z-index: 200;
+    background: #000;
+    border-radius: 10rpx;
+    border-top-left-radius: 0rpx;
+    padding:0px 10rpx;
+}
+
+
+
+.oneplayer image{
+    width: 100rpx;
+    height:100rpx;
+}
+.oneplayer text{
+    background: #000;
+    display: block;
+    text-align: center;
+    color: #fff;
+}
+.container{
+    display: block;
+    flex-direction:initial;
+    align-items:initial;
+}
+.buttonbox{
+    display: block;
+   position: fixed;
+    bottom:100rpx;
+    left:100rpx;
+     flex-direction:column-reverse;
+     text-align: center;
+}
+.buttonbox button{
+    float: left;
+    margin:0px 20rpx;
+}

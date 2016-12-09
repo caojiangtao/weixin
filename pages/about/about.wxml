@@ -1,0 +1,19 @@
+<!--logs.wxml-->
+<view class="container">
+<swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}" wx:key="{{}}" >
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" />
+    </swiper-item>
+  </block>
+</swiper>
+<text class="setnumber">
+游戏背景：在一个美丽的小村庄里，潜伏着可怕的狼人！每天晚上，都有一个善良的村民成为狼人的牺牲品。但是，村民们不会坐以待毙，试图在白天找到这些狼人并处决他们。<br/>
+游戏人数：7-17<br/>
+村民的目标：白天的时候处决所有的狼人。<br/>
+狼人的目标：黑夜的时候杀死所有的村民。<br/>
+各种人物角色<br/>
+预言家：天黑时睁眼，一晚可以查看一名玩家的身份。<br/>
+</text>
+</view>

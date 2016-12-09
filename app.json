@@ -1,0 +1,17 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/about/about",
+    "pages/set/set",
+     "pages/room/room",
+     "pages/card/card",
+     "pages/cardlist/cardlist"
+  ],
+  "navigationBarTitleText": "狼人杀",
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "Werewolf",
+    "navigationBarTextStyle":"white"
+  }
+}

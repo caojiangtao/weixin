@@ -1,0 +1,150 @@
+
+.title{
+  color: #fff;
+  opacity:0.8;
+  font-size: 40rpx;
+  display: block;
+  height:30rpx;
+
+}
+.number{
+  color: #fff;
+  line-height: 50rpx;
+  margin-top: 50rpx;
+  padding:10rpx 40rpx;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 10%;
+
+}
+.container{
+  justify-content:initial;
+}
+
+.slider{
+  width:80%;
+  height: 30rpx;
+  padding: 20rpx;
+}
+.identity{
+  font-size: 30rpx;
+  padding: 20rpx 40rpx;
+  color:#fff;
+  opacity: 0.8;
+  display: inline-block;
+}
+.identbox{
+  text-align: center;
+}
+.set{
+  display: inline-block;
+  font-size: 35rpx;
+  padding: 0px 5px;
+  border-bottom-right-radius: 0rpx;
+  border-top-right-radius: 0rpx;
+}
+.action{
+    display: inline-block;
+  font-size: 35rpx;
+  border-bottom-left-radius: 0rpx;
+  border-top-left-radius: 0rpx;
+}
+.buttonbox{
+  background: rgba(000, 000, 000, 0.3);
+  margin-top: 50rpx;
+}
+.buttonbox .tips{
+  color: #fff;
+  margin-top: 50rpx;
+  display: block;
+}
+
+.playername{
+  width:180rpx;
+}
+/*.bc text{
+	color:#fff;
+		text-align: center;
+	line-height: 80rpx;
+	
+
+	
+	
+}*/
+.box button,.box text{
+	display: inline-block;
+	
+}
+.box button{
+	padding:0rpx 20rpx;
+	line-height:50rpx;
+	vertical-align: middle;
+	background: lightseagreen;
+}
+.container2{
+padding:0;
+  color:#fff;
+  position: fixed;
+  width:100%;
+  height:100%;
+  left: 0%;
+ box-shadow: 1rpx -1rpx 10rpx #052244;
+  top:0%;
+  z-index: 200;
+  background:rgba(000, 000, 000, 1);
+  border-radius: 20rpx;
+	display: block;
+  justify-content:inherit;
+  flex-direction: row;
+  align-items:flex-start;
+}
+.container2 text{
+ 	color:#fff;
+		text-align: center;
+	line-height: 80rpx;
+}
+.w1000{
+ width: 1000rpx;
+}
+.w50{
+	float: left;
+	width:50%;
+	text-align: center;
+	height:50repx;
+}
+.number2{
+	padding:0px 20rpx;
+}
+.choose{
+  text-align: center;
+  vertical-align:center;
+  display: flex;
+}
+.choose text{
+  justify-content:flex-end;
+  text-align: right;
+}
+.choose switch{
+   float: right;
+   margin-left: 10rpx;
+}
+button.sure{
+	display:block;
+  width:200rpx;
+  margin-top: 0rpx;
+ 
+}
+.zhezhao{
+  position:absolute;
+  width:100%;
+  height:100%;
+  z-index: 999;
+  opacity: 0;
+  background: #052244;
+}
+.setmore{
+  clear: both;
+  overflow: hidden;
+  justify-content:center;
+  padding:20rpx;
+}
+.margb{ margin-bottom: 0rpx; overflow: hidden;display: block;clear: both; margin-bottom: 20rpx;}

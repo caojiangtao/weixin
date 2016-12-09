@@ -1,0 +1,70 @@
+<!--room.wxml-->
+<import src="setnumber.wxml"/>
+<view class="container bc"> 
+    <text class="title ">{{title}}</text>
+    <text class="number">{{_number}} 人</text>
+     <slider bindchange="setnumber" show-value min="7" max="17" class="slider"/>
+
+     <view class="identbox">
+        <text class="identity" wx:for="{{player}}" wx:key="id" wx:for-item="item">
+            <block wx:if="{{index < 12}}">
+              {{item.name}} {{item.number}} 
+            </block>         
+        </text>
+     </view>
+     <view class="buttonbox">
+      <button type="primary" class="set"  bindtap="playerset">设置 </button>
+     <button type="primary" class="action"  bindtap="start"> 开始发牌 </button>
+     <text class="tips">{{tips}}</text>
+     </view>
+<!--弹出层-->
+    <view wx:if="{{hidden}}">
+        <view class="container2 bc">
+	        <text class="total w50">总数  :  {{_number}}</text>
+	        <text class="judge w50 ">法官  :  {{player[0]["number"]}}</text>
+	        <text class="civilian w50">平民  :  {{player[2]["number"]}}</text>
+           
+           <view class="margb">
+           <!--<block wx:for="{{player}}" wx:key ="{{index}}">
+            <block wx:if="{{index == 1}}">
+                <template is="setnumber" data="{{item}}"/>
+            </block>
+             <block wx:if="{{index == 3}}">
+                <template is="setnumber" data="{{item}}"/>
+            </block>
+            <block wx:if="{{index == 4}}">
+                <template is="setnumber" data="{{item}}"/>
+            </block>
+           </block>-->
+           
+        
+                <view class="box w50" >
+                    <button type="default"  data-name="狼人" bindtap="add" > + </button>
+                    <text class="wolf number2">狼人  : {{player[1]["number"]}}</text>
+                    <button type="default" size="{{defaultSize}}"  data-name="狼人"  bindtap="sub" >- </button>
+                </view>
+                <view class="box w50">
+                    <button type="default"data-name="预言家" bindtap="add" > + </button>
+                    <text class="prophet number2">预言家  : {{player[3]["number"]}}</text>
+                    <button type="default" size="{{defaultSize}}" data-name="预言家"  bindtap="sub" >- </button>
+                </view>
+                <view class="box w50">
+                    <button type="default" data-name="猎人" bindtap="add" > + </button>
+                        <text class="prophet number2">猎人 : {{player[4]["number"]}}</text>
+                    <button type="default" size="{{defaultSize}}" data-name="猎人"  bindtap="sub" >- </button>
+                </view>
+             </view>
+                <view  style="margin-bottom:50px; overflow:hidden;position:relative ">
+                <view class="box w50 choose" wx:for="{{player}}" wx:key="id" wx:for-item="item">
+                <block wx:if="{{index >4}}">
+                    <text class="playername">{{item.name}}:</text> 
+                     <switch type="switch" data-name="{{item.name}}" disabled="{{item.disabled}}"  bindchange="setswitch" checked="{{item.checked}}" />
+                </block>
+                </view>
+       </view>
+        	 <button type="primary" bindtap="primary" class="sure" bindtap="playerset"> 确认 </button>
+
+        </view>
+    </view>
+    <!--弹出end-->
+</view>

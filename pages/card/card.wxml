@@ -1,0 +1,20 @@
+<view class="container bc">
+   <view bindtap="poto" >
+    <text class="tips">依次传阅 查看身份</text>
+    <view class="potobox">
+    <text class="number">{{_number}}</text>
+    <image src="{{imgsrc}}" class="img"></image>
+    </view>
+   </view>
+    <view class="cardbox" hidden="{{hidden}}">
+        <image src="{{card}}"  class="card"></image> 
+        <text class="name">{{name}}</text>
+    </view>
+     <view class="buttonbox">
+      <button type="primary" class="poto"  bindtap="poto">拍照</button>
+      <button type="primary" class="myimg"  bindtap="myimg">随机头像</button>
+      <button type="primary"  class="set"   bindtap="look">查看身份</button>
+     </view>
+
+
+</view>

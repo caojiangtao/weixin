@@ -1,0 +1,9 @@
+.bc{
+  background:#052244 url("http://ohcm6uzn6.bkt.clouddn.com/%E6%9C%AA%E6%A0%87%E9%A2%98-1.png") 0 100% no-repeat;
+  background-size:100% auto;
+  height: 100%;
+  padding: 40rpx 0;
+}
+page{
+  height:100%;
+}

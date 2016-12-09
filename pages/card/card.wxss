@@ -1,0 +1,60 @@
+.img{
+    width:300rpx;
+    height:300rpx;
+    display: block;
+    border:3rpx solid #079ad1;
+
+}
+.tips{
+    color: #fff;
+    display: block;
+    margin-bottom: 80rpx;
+}
+.number{
+    color: #fff;
+    background: #000;
+    padding:10rpx;
+    position: absolute;
+    left:3rpx;
+    top:3rpx;
+    
+}
+.potobox{
+    position: relative;
+}
+.poto{
+    margin: 30rpx 0;
+    display: inline-block;
+  font-size: 35rpx;
+  padding: 0px 5px;
+  border-bottom-right-radius: 0rpx;
+  border-top-right-radius: 0rpx;
+}
+.myimg{
+margin: 30rpx 0;
+ display: inline-block;
+  font-size: 35rpx;
+  border-bottom-left-radius: 0rpx;
+  border-top-left-radius: 0rpx;
+}
+.cardbox{
+    position: fixed;
+    top:500rpx;
+    z-index: 200;
+    background: #ccc;
+    height:350rpx;
+    width:350rpx;
+    left:50%;
+    margin-left: -175rpx;
+}
+.card{
+    width: 350rpx;
+    height:350rpx;
+}
+.name{
+    background: #000;
+    padding: 5rpx 10rpx;
+    color: #fff;
+    display: block;
+    text-align: center;
+}

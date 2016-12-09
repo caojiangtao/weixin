@@ -1,0 +1,15 @@
+swiper{
+    height:400rpx;
+    width:100%;
+}
+.container{
+    padding: 0;
+}
+.setnumber{
+    padding: 20rpx;
+    font-size: 26rpx;
+    line-height: 50rpx;
+}
+.slide-image{
+    width:100%;
+}

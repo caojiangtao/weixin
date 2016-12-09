@@ -1,0 +1,23 @@
+<view class="container bc">
+
+
+  <view class="oneplayer" wx:for="{{cardlist}}" hidden="{{hidden}}"  wx:for-item="item" wx:key="id">
+     <text class="cardid">{{item.id}}</text>
+      <image src="{{item.card}}"></image>
+       <text>{{item.name}}</text>
+  </view>
+
+  <view class="oneplayer" wx:for="{{cardlist}}" hidden="{{!hidden}}" wx:for-item="item" wx:key="id">
+     <text class="cardid">{{item.id}}</text>
+      <image src="{{item.poto}}"></image>
+       <text></text>     
+  </view>
+
+        
+        <view class="buttonbox" >
+        <button type="primary" class="poto"  bindtap="backindex">返回首页</button>
+        <button type="primary" bindtouchstart="showcard" bindtouchend="hidecard">法官查看</button>
+        </view>
+   
+  
+</view>

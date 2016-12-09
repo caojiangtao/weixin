@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "狼人杀",
+    "window":{
+    "backgroundTextStyle":"#fff",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTextStyle":"#fff"
+  }
+}

@@ -1,0 +1,7 @@
+<template name="setnumber">
+            <view class="box w50">
+                <button type="default"data-name="{{itme.name}}" bindtap="add" > + </button>
+                <text class="prophet number2">{{item.name}}  : {{item.number}}</text>
+                <button type="default" size="{{defaultSize}}" data-name="{{item.name}}"  bindtap="sub" >- </button>
+            </view>
+</template>
