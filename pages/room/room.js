@@ -6,40 +6,18 @@ Page({
 		title: "人数设置",
 		tips: "(请自行指点法官)",
 		_number: 7, //默认人数
-		player: []//角色数据,
-		
+		player: []//角色数据 	
 	},
 	// 监听slider
 	setswitch:function(e){
-		  	var that = this;
-			var _swich = e.detail.value;
-			if(_swich == true){
-			   that.add(e);
-			}else{
- 			   that.sub(e);
-			}
+		  	let that = this;
+			let _swich = e.detail.value;
+			_swich==true?that.add(e):that.sub(e);
 	},
 	setnumber: function(e) {
-		var that = this;
-		// var defnumber = new list;
-		// var n = e.detail.value;
-		// defnumber.pos = n;	
-		// var data = util.player(defnumber.pos)
-		// defnumber.setdata(data);
-		// if(n>=8){
-		// 	defnumber.pos=5;
-		// 	defnumber.getElement().checked = true;
-		// };
-        // if(n>=12 && n<=17){
-		// 	defnumber.pos=6;
-		// 	defnumber.getElement().checked = true;
-		// };
-		// that.setData({
-		// 	_number: e.detail.value,
-		// 	player:defnumber.dataStore
-		// });
-		 var n = e.detail.value;
-		var data = util.player(n);
+		let that = this;
+		let n = e.detail.value;
+		let data = util.player(n);		
 		if(n>=8){
 			data[5]["checked"] = true;
 		};
@@ -49,13 +27,13 @@ Page({
 		that.setData({
 			_number: e.detail.value,
 			player:data
-
 		});
 	},
 	sub:function(event){
-		var that = this;	
-		var name = event.target.dataset.name;//获取传递的数据名称;
-		that.data.player.map(function(item){
+		let that = this;
+		let name = event.target.dataset.name;//获取传递的数据名称;
+		let _data = that.data.player;
+		_data.map(item => {
 			if(item.name ==name && item.number >=1){
 				if(item.name =="狼人" && item.number == 1) return false;
 				item.number--;
@@ -63,12 +41,9 @@ Page({
 				item["checked"] = false;
 				item["disabled"] = false;
 			};
-		
-				if(item["checked"] != true ){
-					item["disabled"] = false;			
-				}
-	
-			
+			if(item["checked"] != true ){
+				item["disabled"] = false;			
+			}
 		});
 		that.setData({
 			player: that.data.player
@@ -76,31 +51,33 @@ Page({
 		console.log(that.data.player)
 	},
 	add:function(event){
-		var that = this;	
+		var that = this;
+		if(that.data.player[2].number ==0){ return false	}	
 		var name = event.target.dataset.name;//获取传递的数据名称;
-		console.log("that.data.player[2].number =",that.data.player[2].number )
-		if(that.data.player[2].number ==1){	
-			that.data.player.map(function(item){
+		var _number = that.data.player[2].number;
+		var _data = that.data.player;
+		if(_number == 1){
+			_data.map(item => {
 				if(item.name ==name ){
-					item.number++;
 					item["checked"] = true;
 				}
 				if(item["checked"]!= true ){
 					item["disabled"] = true;
 					item["checked"] = false;
-				}
-			
+				}				
 			})
 		};
-		that.data.player.map(function(item){	
+		
+		_data.map(item =>{
 			if(item.name ==name ){
 				item.number++;
 				item["checked"] = true;
 			}
 			if(item.name =="平民" && item.number>=1){
 				item.number--;
-			}	
-		})
+			}
+		});
+
 		that.setData({
 			player: that.data.player
 		});
@@ -127,5 +104,6 @@ Page({
 		this.setData({
 			player: util.player(7)
 		})
+
 	}
 })

@@ -6,7 +6,7 @@
     <image src="{{imgsrc}}" class="img"></image>
     </view>
    </view>
-    <view class="cardbox" hidden="{{hidden}}">
+    <view class="cardbox"  animation="{{animationData}}" >
         <image src="{{card}}"  class="card"></image> 
         <text class="name">{{name}}</text>
     </view>

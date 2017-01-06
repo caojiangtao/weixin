@@ -38,8 +38,9 @@ margin: 30rpx 0;
   border-top-left-radius: 0rpx;
 }
 .cardbox{
+    opacity: 0;
     position: fixed;
-    top:500rpx;
+    top:700rpx;
     z-index: 200;
     background: #ccc;
     height:350rpx;

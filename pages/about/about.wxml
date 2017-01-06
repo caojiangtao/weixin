@@ -1,5 +1,6 @@
 <!--logs.wxml-->
 <view class="container">
+<view animation="{{animationData}}" style="background:red;height:100rpx;width:100rpx"></view>
 <swiper indicator-dots="{{indicatorDots}}"
   autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
   <block wx:for="{{imgUrls}}" wx:key="{{}}" >
@@ -16,4 +17,5 @@
 各种人物角色<br/>
 预言家：天黑时睁眼，一晚可以查看一名玩家的身份。<br/>
 </text>
+
 </view>

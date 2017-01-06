@@ -10,7 +10,8 @@ Page({
     indicatorDots: true, //是否显示圆点
     autoplay: true, //是否自动切换
     interval: 5000, //自动切换时间间隔
-    duration: 1000  //滑动动画时长
+    duration: 1000 //滑动动画时长
+    
   },
   changeIndicatorDots: function(e) {
     this.setData({

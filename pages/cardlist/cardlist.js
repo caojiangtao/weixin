@@ -23,26 +23,29 @@ Page({
                  })
             }
         });
-            wx.getStorage({
-            key: 'cameralist',
-            success: function(res) { //对数据进行重新整理，只显示被设置的角色
-            for(var i=0; i<res.data.length;i++){
-                wx.removeSavedFile({
-                filePath:res.data[i],
-                success: function(res) {
-                        console.log(res)
-                        console.log("除成功")
-                    }
-                })
-            }
-            }
-        });
+         setTimeout(function(){},2000)
+
      },
      backindex:function(){ //返回首页
         var that= this;
-         wx.redirectTo({
-            url: '../index/index'
-         })
+            wx.getStorage({
+                key: 'cameralist',
+                success: function(res) { 
+                    for(var i=0; i<res.data.length;i++){
+                        wx.removeSavedFile({
+                            filePath:res.data[i],
+                            success: function(res) {
+                                console.log(res)
+                                console.log("除成功")
+                                wx.redirectTo({
+                                    url: '../index/index'
+                                })
+                            }
+                        })
+                    }
+                }
+            });
+
      },
      showcard:function(){
          var that= this;
